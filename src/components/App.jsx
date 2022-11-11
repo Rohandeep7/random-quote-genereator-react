@@ -1,24 +1,27 @@
 import { useEffect, useState } from "react";
-
+import { TransitionGroup } from "react-transition-group";
+import { Slide, Collapse, Fade } from "@mui/material";
+import { QuoteProvider } from "../context/QuoteContext";
+import "../index.css";
+import Quote from "./randomQuote/Quote";
+import Navbar from "./layout/Navbar";
+import Footer from "./layout/Footer";
+import { Routes, Route } from "react-router-dom";
+import AuthorQuotes from "./author/AuthorQuotes";
 function App() {
-
-  const [apiData,setData]=useState([])
-  useEffect(()=>{
-    const fetchQuote=async ()=>{
-      const response=await fetch('https://quote-garden.herokuapp.com/api/v3/quotes/random')
-      const data=await response.json()
-      console.log(data);
-      setData(data.data)
-    }
-     fetchQuote()   
-  },[])
-
   return (
-    <div className="App">
-      {apiData.map(quote=>{
-        return <h1 key={quote._id}>{quote.quoteText}</h1>
-      })}
-    </div>
+    <>
+      <QuoteProvider>
+        <div className="flex min-h-screen flex-col">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Quote />} />
+            <Route path="/authors/:authorName" element={<AuthorQuotes />} />
+          </Routes>
+          <Footer />
+        </div>
+      </QuoteProvider>
+    </>
   );
 }
 
