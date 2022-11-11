@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Todo App</h1>
+<h1 align="center">Random Quote Generator</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,15 +8,15 @@
 
 <div align="center">
   <h3>
-    <a href="https://your-todo-fr.netlify.app/">
+    <a href="https://random-quote-genereator-react.vercel.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/solutions/84jeBFuUwhEdU7AvVm2B">
+    <a href="https://devchallenges.io/solutions/ZJRQFq53ZBw5mtfcsdcN">
       Solution
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5">
+    <a href="https://devchallenges.io/challenges/8Y3J4ucAMQpSnYTwwWW8">
       Challenge
     </a>
   </h3>
